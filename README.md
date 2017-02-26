@@ -62,6 +62,9 @@ private function _creerCompte()
 Le fichier qui est vérifié est update.lock, il faut donc ajouter / supprimer manuellement ce fichier à la racine de l'application pour autoriser ou non les mises à jour.
 Les mises à jour sont manuelles, et se basent sur les fichiers de migrations situées dans /config/migrations
 
+# Bootstrapping route
+Par défaut, si le fichier install.lock n'est pas trouvé, le plugin bootstrap *toutes* les routes de l'application et force la redirection vers le plugin d'installation. Pour modifier ce comportement modifier le fichier WizardInstaller/config/bootstrap.php
+
 # Conclusion
 C'est un plugin utile pour moi, qui n'est pas forcément publiable en l'état et qui devra être modifié si vous en avez besoin.
 Je reste à votre disposition si vous avez des questions, ou si vous avez des suggestions d'améliorations je suis preneur (PR inside ou Issue requests ;))
